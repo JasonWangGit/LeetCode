@@ -1,6 +1,6 @@
 [作者：穷码农](https://www.zhihu.com/question/36738189/answer/908664455)
 
-## 1. Pattern: Sliding window，**滑动窗口类型**
+## 1. Pattern: Sliding Window，**滑动窗口类型**
 
 滑动窗口类型的题目经常是用来执行数组或是链表上某个区间（窗口）上的操作。比如找最长的全为1的子数组长度。滑动窗口一般从第一个元素开始，一直往右边一个一个元素挪动。当然了，根据题目要求，我们可能有固定窗口大小的情况，也有窗口的大小变化的情况。
 
@@ -31,7 +31,7 @@ Longest Subarray with Ones after Replacement (hard)
 
 ------
 
-## 2. Pattern: two points, **双指针类型**
+## 2. Pattern: Two Pointers, **双指针类型**
 
 双指针是这样的模式：两个指针朝着左右方向移动（双指针分为同向双指针和异向双指针），直到他们有一个或是两个都满足某种条件。双指针通常用在排好序的数组或是链表中寻找对子。比如，你需要去比较数组中每个元素和其他元素的关系时，你就需要用到双指针了。
 
@@ -130,14 +130,12 @@ Conflicting Appointments (medium)
 
 这种模式讲述的是一直很好玩的方法：可以用来处理数组中的数值限定在一定的区间的问题。这种模式一个个遍历数组中的元素，如果当前这个数它不在其应该在的位置的话，咱们就把它和它应该在的那个位置上的数交换一下。你可以尝试将该数放到其正确的位置上，但这复杂度就会是O(n^2)。这样的话，可能就不是最优解了。因此循环排序的优势就体现出来了。
 
-![img](https://pic1.zhimg.com/50/v2-e5a2fe3faa0b55ad5c6d8f182039cd35_hd.jpg?source=1940ef5c)![img](https://pic1.zhimg.com/80/v2-e5a2fe3faa0b55ad5c6d8f182039cd35_720w.jpg?source=1940ef5c)
+<img src="https://pic1.zhimg.com/50/v2-e5a2fe3faa0b55ad5c6d8f182039cd35_hd.jpg?source=1940ef5c" alt="img" style="zoom:50%;" />
 
 咋鉴别这种模式？
 
 - 这些问题一般设计到排序好的数组，而且数值一般满足于一定的区间
 - 如果问题让你需要在排好序/翻转过的数组中，寻找丢失的/重复的/最小的元素
-
-
 
 **经典题目：**
 
@@ -159,7 +157,7 @@ Find all Duplicate Numbers (easy)
 
 这种模式每次就翻转一个节点。一般需要用到多个变量，一个变量指向头结点（下图中的current），另外一个（previous）则指向咱们刚刚处理完的那个节点。在这种固定步长的方式下，你需要先将当前节点（current）指向前一个节点（previous），再移动到下一个。同时，你需要将previous总是更新到你刚刚新鲜处理完的节点，以保证正确性。
 
-![img](https://pic4.zhimg.com/50/v2-79af44147f0e31ef768b8867a43acac5_hd.jpg?source=1940ef5c)![img](https://pic4.zhimg.com/80/v2-79af44147f0e31ef768b8867a43acac5_720w.jpg?source=1940ef5c)
+<img src="https://pic4.zhimg.com/50/v2-79af44147f0e31ef768b8867a43acac5_hd.jpg?source=1940ef5c" alt="img" style="zoom:50%;" />
 
 咱们怎么去甄别这种模式呢？
 
@@ -270,7 +268,7 @@ Maximize Capital (hard)
 
 该模式的详细步骤如下：
 
-![img](https://pic1.zhimg.com/50/v2-0409666e91e94287c167ef81670d19a5_hd.jpg?source=1940ef5c)![img](https://pic1.zhimg.com/80/v2-0409666e91e94287c167ef81670d19a5_720w.jpg?source=1940ef5c)
+<img src="https://pic1.zhimg.com/50/v2-0409666e91e94287c167ef81670d19a5_hd.jpg?source=1940ef5c" alt="img" style="zoom:50%;" />
 
 如果判断这种子集模式：
 
@@ -306,7 +304,7 @@ Unique Generalized Abbreviations (hard)
 
 图示该过程的话，如下图所示：
 
-![img](https://pic4.zhimg.com/50/v2-29f25eef886240f3ed3767039fb8f1db_hd.jpg?source=1940ef5c)![img](https://pic4.zhimg.com/80/v2-29f25eef886240f3ed3767039fb8f1db_720w.jpg?source=1940ef5c)
+<img src="https://pic4.zhimg.com/50/v2-29f25eef886240f3ed3767039fb8f1db_hd.jpg?source=1940ef5c" alt="img" style="zoom:50%;" />
 
 **经典题目：**
 
@@ -337,7 +335,7 @@ Bitonic Array Maximum (easy)
 1. 根据题目要求，将K个元素插入到最小堆或是最大堆。
 2. 遍历剩下的还没访问的元素，如果当前出来到的这个元素比堆顶元素大，那咱们把堆顶元素先删除，再加当前元素进去。
 
-![img](https://pic1.zhimg.com/50/v2-d42febfdf2d1ce2d2211e78ff8ea88db_hd.jpg?source=1940ef5c)![img](https://pic1.zhimg.com/80/v2-d42febfdf2d1ce2d2211e78ff8ea88db_720w.jpg?source=1940ef5c)
+<img src="https://pic1.zhimg.com/50/v2-d42febfdf2d1ce2d2211e78ff8ea88db_hd.jpg?source=1940ef5c" alt="img" style="zoom:50%;" />
 
 注意这种模式下，咱们不需要去排序数组，因为堆具有这种良好的局部有序性，这对咱们需要解决问题就够了。
 
@@ -378,7 +376,7 @@ K路归并能帮咱们解决那些涉及到多组排好序的数组的问题。
 
 每当你的输入是K个排好序的数组，你就可以用堆来高效顺序遍历其中所有数组的所有元素。你可以将每个数组中最小的一个元素加入到最小堆中，从而得到全局最小值。当我们拿到这个全局最小值之后，再从该元素所在的数组里取出其后面紧挨着的元素，加入堆。如此往复直到处理完所有的元素。
 
-![img](https://pic3.zhimg.com/50/v2-3e133c0710ef919e120fc74275d5255b_hd.jpg?source=1940ef5c)![img](https://pic3.zhimg.com/80/v2-3e133c0710ef919e120fc74275d5255b_720w.jpg?source=1940ef5c)
+<img src="https://pic3.zhimg.com/50/v2-3e133c0710ef919e120fc74275d5255b_hd.jpg?source=1940ef5c" alt="img" style="zoom:50%;" />
 
 该模式是这样的运行的：
 
@@ -406,9 +404,7 @@ Smallest Number Range (Hard)
 
 ## 14. Pattern: 0/1 Knapsack (Dynamic Programming)，**0/1背包类型**
 
-
-
-经典题目：
+**经典题目：**
 
 0/1 Knapsack (medium)
 
@@ -443,11 +439,7 @@ Minimum Subset Sum Difference (hard)
    — iv)如果孩子的入度变为0，则改孩子节点成为起点，将其加入队列中
    b) 重复（a）过程，直到起点队列为空。
 
-
-
-
-
-![img](https://pic4.zhimg.com/50/v2-8a8abca46a67d38c1be674f9c777c8ef_hd.jpg?source=1940ef5c)![img](https://pic4.zhimg.com/80/v2-8a8abca46a67d38c1be674f9c777c8ef_720w.jpg?source=1940ef5c)
+<img src="https://pic4.zhimg.com/50/v2-8a8abca46a67d38c1be674f9c777c8ef_hd.jpg?source=1940ef5c" alt="img" style="zoom:50%;" />
 
 拓扑排序模式识别：
 
@@ -467,19 +459,15 @@ All Tasks Scheduling Orders (hard)
 
 Alien Dictionary (hard)
 
+## 16. Pattern: Bitwise XOR
 
-
-大家好好练练这些题目，面试中遇到中高等难度的题目，应该就能解得不错了。
+?
 
 ------
 
 **第二门则是单独将动态规划（DP）的题目进行了细分。**
 
 提到算法，绕不开的重点和难点就肯定会包括动态规划 -- DP，本文就把经典的DP问题按照分类列一下，大家可以按照**Recursion**，**Top-Down**，**Bottom-Up**三种方式都练一练。俗话说，熟能生巧，多练才是提高算法的不二法宝。
-
-课程详细的内容，可以参考这里：
-
-[Grokking Dynamic Programming Patterns for Coding Interviewswww.educative.io![图标](https://pic2.zhimg.com/v2-4bce6b312c6177a5f10303eddbc74b99_180x120.jpg)](https://link.zhihu.com/?target=https%3A//www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews%3Faff%3DK7qB)
 
 该门课程中, 作者将DP的问题分成以下几类:
 
